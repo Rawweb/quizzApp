@@ -47,6 +47,7 @@
 
 .hud-main-text {
     text-align: center;
+    margin-top: 1.5rem;
 }
 
 #progressBar {
@@ -60,4 +61,52 @@
     height: 3.4rem;
     background-color: #56a5eb;
     width: 0%;
+}
+
+#loader {
+    border: .8rem solid #fff;
+    border-radius: 50%;
+    border-top: .8rem solid #56a5eb;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 351px) {
+    #progressBar {
+    width: 15rem;
+    height: 3rem;
+   
+}
+
+#progressBarFull {
+    height: 2.65rem;
+}
+}
+
+@media (max-width: 347px) {
+    .hud-prefix {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.hud-main-text {
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.choice-container p {
+    font-size: 1.5rem;
+}
 }

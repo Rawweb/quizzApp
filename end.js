@@ -3,10 +3,9 @@ const saveScoreBtn = document.getElementById("saveScoreBtn");
 const finalScore = document.getElementById("finalScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 
-const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 const MAX_HIGH_SCORES = 5;
-console.log(highscores);
 
 finalScore.innerText = mostRecentScore;
 
@@ -14,8 +13,7 @@ username.addEventListener("keyup", () => {
     saveScoreBtn.disabled = !username.value;
 });
 
-saveHighScore = (e) => {
-    console.log("clicked the save button");
+saveScoreBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
     const score = {
@@ -23,12 +21,11 @@ saveHighScore = (e) => {
         name: username.value,
     };
 
-    highscores.push(score);
-    highscores.sort((a, b) => b.score - a.score);
-    highscores.splice(5);
+    highScores.push(score);
+    highScores.sort((a, b) => b.score - a.score);
+    highScores.splice(MAX_HIGH_SCORES);
 
-    localStorage.setItem("highScores", JSON.stringify(highscores));
+    localStorage.setItem("highScores", JSON.stringify(highScores));
     window.location.assign("./index.html");
 
-    console.log(highscores);
-};
+});

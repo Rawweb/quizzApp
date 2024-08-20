@@ -128,6 +128,45 @@ input::placeholder {
 }
 
 
+@media (max-width: 555px) {
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 4rem; /* 54px */
+        color: #56a5eb;
+        margin-bottom: 4rem;
+    }
+
+    h1 > span {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+}
+
+
+@media (max-width: 351px) {
+    h2 {
+        font-size: 1.8rem; /* 54px */
+    }
+}
+
 
 
 
